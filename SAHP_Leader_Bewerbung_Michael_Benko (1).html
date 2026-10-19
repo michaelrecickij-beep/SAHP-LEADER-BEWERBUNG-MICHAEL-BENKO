@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SAHP Leader-Bewerbung | Michael Benko</title>
+<meta name="description" content="Leader-Bewerbung von Michael Benko für das San Andreas Highway Patrol.">
+
+<style>
+:root{
+  --bg:#05080d;
+  --bg2:#0a111b;
+  --panel:#0e1722;
+  --panel2:#121e2b;
+  --line:rgba(255,255,255,.10);
+  --text:#f4f7fa;
+  --muted:#aab6c2;
+  --blue:#4aa8ff;
+  --blue2:#176bb4;
+  --gold:#e8bd63;
+  --danger:#ef6b73;
+  --shadow:0 25px 70px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box;scroll-behavior:smooth}
+html{scroll-padding-top:90px}
+body{
+  margin:0;
+  font-family:Inter,Segoe UI,Arial,sans-serif;
+  background:
+    radial-gradient(circle at 80% 5%,rgba(45,129,203,.14),transparent 28rem),
+    radial-gradient(circle at 10% 35%,rgba(232,189,99,.06),transparent 25rem),
+    var(--bg);
+  color:var(--text);
+  line-height:1.7;
+}
+body:before{
+  content:"";
+  position:fixed;inset:0;pointer-events:none;opacity:.035;
+  background-image:linear-gradient(rgba(255,255,255,.4) 1px,transparent 1px),
+                   linear-gradient(90deg,rgba(255,255,255,.4) 1px,transparent 1px);
+  background-size:40px 40px;
+}
+a{color:inherit}
+.container{width:min(1180px,calc(100% - 40px));margin:auto}
+.topbar{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  background:rgba(5,8,13,.82);backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--line);
+}
+.nav{
+  min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:24px
+}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo-mark{
+  width:42px;height:42px;border:1px solid rgba(232,189,99,.55);
+  border-radius:10px;display:grid;place-items:center;
+  color:var(--gold);font-weight:900;letter-spacing:-1px;
+  background:linear-gradient(145deg,rgba(232,189,99,.14),rgba(74,168,255,.06));
+}
+.logo strong{display:block;font-size:.88rem;letter-spacing:.08em}
+.logo small{display:block;color:var(--muted);font-size:.67rem;letter-spacing:.12em}
+nav{display:flex;gap:4px;flex-wrap:wrap;justify-content:flex-end}
+nav a{
+  text-decoration:none;color:#cbd5df;font-size:.78rem;font-weight:700;
+  padding:9px 11px;border-radius:8px;transition:.2s
+}
+nav a:hover{background:rgba(74,168,255,.10);color:white}
+.hero{
+  min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;
+  padding:130px 0 80px;
+}
+.hero:after{
+  content:"SAHP";position:absolute;right:-80px;bottom:-150px;
+  font-size:clamp(13rem,30vw,30rem);font-weight:900;letter-spacing:-.08em;
+  color:rgba(255,255,255,.018);pointer-events:none;
+}
+.hero-grid{display:grid;grid-template-columns:1.3fr .7fr;gap:60px;align-items:center}
+.kicker{
+  display:inline-flex;align-items:center;gap:9px;color:var(--gold);
+  font-size:.78rem;font-weight:900;letter-spacing:.2em;text-transform:uppercase
+}
+.kicker:before{content:"";width:28px;height:1px;background:var(--gold)}
+h1{font-size:clamp(3.2rem,8vw,7.4rem);line-height:.92;letter-spacing:-.065em;margin:20px 0 25px}
+h1 span{color:var(--blue)}
+.hero p{font-size:1.1rem;color:#c1ccd6;max-width:760px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}
+.btn{
+  display:inline-flex;align-items:center;gap:9px;padding:13px 18px;border-radius:10px;
+  text-decoration:none;font-weight:800;border:1px solid var(--line);transition:.2s
+}
+.btn.primary{background:linear-gradient(135deg,var(--blue2),#298de1);border-color:#3a9bea}
+.btn.secondary{background:rgba(255,255,255,.04)}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 30px rgba(0,0,0,.25)}
+.profile{
+  background:linear-gradient(160deg,rgba(255,255,255,.08),rgba(255,255,255,.025));
+  border:1px solid var(--line);border-radius:22px;padding:25px;box-shadow:var(--shadow);
+  position:relative;z-index:2
+}
+.profile-head{display:flex;gap:16px;align-items:center;padding-bottom:20px;border-bottom:1px solid var(--line)}
+.avatar{
+  width:62px;height:62px;border-radius:16px;display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--blue2),#0b385d);font-size:1.3rem;font-weight:900
+}
+.profile h3{margin:0}.profile small{color:var(--muted)}
+.info{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:18px}
+.info div{background:rgba(0,0,0,.18);border:1px solid var(--line);padding:12px;border-radius:10px}
+.info label{display:block;color:#7f8e9c;font-size:.67rem;text-transform:uppercase;letter-spacing:.12em}
+.info b{font-size:.9rem}
+section{padding:105px 0}
+.section-head{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:38px}
+.eyebrow{color:var(--gold);font-size:.72rem;text-transform:uppercase;letter-spacing:.18em;font-weight:900}
+h2{font-size:clamp(2rem,5vw,4rem);line-height:1;margin:8px 0 0;letter-spacing:-.045em}
+.lead{color:var(--muted);max-width:650px;margin:0}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+.card{
+  grid-column:span 4;background:linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.018));
+  border:1px solid var(--line);border-radius:16px;padding:24px;transition:.25s
+}
+.card:hover{transform:translateY(-4px);border-color:rgba(74,168,255,.35)}
+.card.wide{grid-column:span 6}.card.full{grid-column:span 12}
+.card h3{margin:8px 0 8px;font-size:1.12rem}.card p{margin:0;color:var(--muted)}
+.icon{
+  width:42px;height:42px;border-radius:11px;display:grid;place-items:center;
+  background:rgba(74,168,255,.10);border:1px solid rgba(74,168,255,.2);color:#76c0ff;font-weight:900
+}
+.quote{
+  margin-top:18px;border-left:3px solid var(--gold);padding:24px 26px;
+  background:rgba(232,189,99,.055);border-radius:0 14px 14px 0;font-size:1.15rem
+}
+.timeline{position:relative;margin-top:15px}
+.timeline:before{content:"";position:absolute;left:8px;top:7px;bottom:7px;width:1px;background:rgba(74,168,255,.4)}
+.titem{position:relative;padding:0 0 20px 34px}.titem:last-child{padding-bottom:0}
+.titem:before{
+  content:"";position:absolute;left:4px;top:7px;width:9px;height:9px;border-radius:50%;
+  background:var(--blue);box-shadow:0 0 0 4px rgba(74,168,255,.10)
+}
+.titem strong{display:block}.titem span{color:var(--muted);font-size:.9rem}
+.ranks{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.rank{
+  display:flex;align-items:center;gap:12px;padding:11px 13px;
+  background:rgba(0,0,0,.16);border:1px solid var(--line);border-radius:10px
+}
+.rank b{width:34px;color:var(--gold)}.rank span{color:#d5dde5}
+.group-title{
+  color:var(--gold);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;
+  font-weight:900;margin:22px 0 10px
+}
+.badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.badge{
+  padding:7px 10px;border-radius:999px;border:1px solid var(--line);
+  color:#cbd6df;background:rgba(255,255,255,.035);font-size:.78rem
+}
+.number{
+  font-size:2.4rem;font-weight:900;line-height:1;color:rgba(74,168,255,.35);letter-spacing:-.06em
+}
+.footer{
+  padding:55px 0;border-top:1px solid var(--line);background:#03060a;color:var(--muted)
+}
+.footer-inner{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.mini{font-size:.78rem}
+@media(max-width:900px){
+  nav{display:none}.hero-grid{grid-template-columns:1fr}.profile{max-width:600px}
+  .card,.card.wide{grid-column:span 6}
+}
+@media(max-width:620px){
+  .container{width:min(100% - 28px,1180px)}section{padding:75px 0}
+  .card,.card.wide,.card.full{grid-column:span 12}.ranks{grid-template-columns:1fr}
+  .hero{padding-top:115px}.info{grid-template-columns:1fr 1fr}
+  .section-head{display:block}.lead{margin-top:14px}
+}
+</style>
+
+<style>
+/* Kopierschutz */
+html, body, body * {
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+  -webkit-touch-callout: none !important;
+}
+img, a, .logo, .card, .profile {
+  -webkit-user-drag: none !important;
+}
+</style>
+<script>
+document.addEventListener("contextmenu", function(e) {
+  e.preventDefault();
+});
+
+document.addEventListener("selectstart", function(e) {
+  e.preventDefault();
+});
+
+document.addEventListener("dragstart", function(e) {
+  e.preventDefault();
+});
+
+document.addEventListener("copy", function(e) {
+  e.preventDefault();
+  e.clipboardData.setData("text/plain", "Kopieren ist auf dieser Bewerbung deaktiviert.");
+});
+
+document.addEventListener("cut", function(e) {
+  e.preventDefault();
+});
+
+document.addEventListener("keydown", function(e) {
+  const key = (e.key || "").toLowerCase();
+
+  // STRG+C / X / U / S / A / P
+  if (e.ctrlKey && ["c","x","u","s","a","p"].includes(key)) {
+    e.preventDefault();
+    return false;
+  }
+
+  // STRG+SHIFT+I/J/C/K
+  if (e.ctrlKey && e.shiftKey && ["i","j","c","k"].includes(key)) {
+    e.preventDefault();
+    return false;
+  }
+
+  // F12 / DevTools
+  if (e.key === "F12") {
+    e.preventDefault();
+    return false;
+  }
+});
+</script>
+
+</head>
+
+<body>
+<header class="topbar">
+  <div class="container nav">
+    <a class="logo" href="#top">
+      <div class="logo-mark">SA</div>
+      <div><strong>SAN ANDREAS HIGHWAY PATROL</strong><small>LEADER-BEWERBUNG · MICHAEL BENKO</small></div>
+    </a>
+    <nav>
+      <a href="#vorstellung">Profil</a>
+      <a href="#motivation">Motivation</a>
+      <a href="#rp">RP</a>
+      <a href="#konzept">Konzept</a>
+      <a href="#ränge">Ränge</a>
+      <a href="#abteilungen">Abteilungen</a>
+      <a href="#verfahren">Bewerbung</a>
+      <a href="#ziel">Vision</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="kicker">San Andreas Highway Patrol</div>
+      <h1>Leadership.<br><span>Struktur.</span><br>Präsenz.</h1>
+      <p>
+        Bewerbung von <strong>Michael Benko</strong> als Sheriff of SAHP.
+        Mein Anspruch: eine aktive, professionelle und verlässliche State-Organisation,
+        in der klare Führung und gutes Roleplay zusammengehören.
+      </p>
+      <div class="actions">
+        <a class="btn primary" href="#vorstellung">Bewerbung ansehen →</a>
+        <a class="btn secondary" href="#ziel">Meine Vision</a>
+      </div>
+    </div>
+
+    <aside class="profile">
+      <div class="profile-head">
+        <div class="avatar">MB</div>
+        <div><h3>Michael Benko</h3><small>Candidate · Sheriff of SAHP</small></div>
+      </div>
+      <div class="info">
+        <div><label>IC Name</label><b>Michael Benko</b></div>
+        <div><label>ID</label><b>#243336</b></div>
+        <div><label>Visum</label><b>35</b></div>
+        <div><label>OOC</label><b>Marc · 18</b></div>
+        <div><label>Discord</label><b>0xmarkxx0</b></div>
+        <div><label>Erfahrung</label><b>ca. 2,5 Jahre</b></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section id="vorstellung">
+<div class="container">
+  <div class="section-head">
+    <div><div class="eyebrow">01 · Profil</div><h2>Wer hinter der Bewerbung steht.</h2></div>
+    <p class="lead">Persönliche Daten und bisherige Erfahrungen aus State und Crime.</p>
+  </div>
+
+  <div class="grid">
+    <div class="card wide">
+      <div class="icon">ST</div><h3>State-Erfahrung</h3>
+      <div class="timeline">
+        <div class="titem"><strong>SAHP</strong><span>Rang 27</span></div>
+        <div class="titem"><strong>Nationale Garde</strong><span>Rang 16</span></div>
+        <div class="titem"><strong>LSPD</strong><span>Rang 25</span></div>
+        <div class="titem"><strong>USSS</strong><span>Rang 28 · Leaderschaft</span></div>
+        <div class="titem"><strong>FIB</strong><span>Rang 8</span></div>
+        <div class="titem"><strong>EMS</strong><span>Rang 12</span></div>
+      </div>
+    </div>
+    <div class="card wide">
+      <div class="icon">CR</div><h3>Crime-Erfahrung</h3>
+      <div class="timeline">
+        <div class="titem"><strong>Los Santos Vagos</strong><span>Dreimal Vize-Leader</span></div>
+        <div class="titem"><strong>Bloods</strong><span>Ausbildungsleitung</span></div>
+        <div class="titem"><strong>Grove Street Families</strong><span>Vize</span></div>
+        <div class="titem"><strong>The Ballas</strong><span>Ausbildungsleitung</span></div>
+        <div class="titem"><strong>Marabunta Grande</strong><span>EX Leader</span></div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="motivation">
+<div class="container">
+  <div class="section-head">
+    <div><div class="eyebrow">02 · Motivation</div><h2>Warum ich Sheriff werden will.</h2></div>
+  </div>
+  <div class="card full">
+    <p>
+      Ich habe sowohl im Crime- als auch im State-Bereich Verantwortung übernommen.
+      Dabei habe ich Erfolge erlebt, aber auch Fehler gemacht. Aus diesen Erfahrungen
+      habe ich gelernt, ruhiger, strukturierter und vorausschauender zu handeln.
+    </p>
+    <p>
+      Als High Rank und Führungskraft habe ich bewiesen, dass ich Teams organisieren,
+      Entscheidungen unter Druck treffen und Mitarbeiter motivieren kann.
+    </p>
+    <p>
+      Mein Ziel ist es, das SAHP zur präsentesten und professionellsten
+      State-Organisation auf Grand RP zu entwickeln.
+    </p>
+    <div class="quote">„Führung bedeutet für mich nicht nur Entscheidungen zu treffen, sondern Verantwortung für die Menschen dahinter zu übernehmen.“</div>
+  </div>
+</div>
+</section>
+
+<section id="rp">
+<div class="container">
+  <div class="section-head">
+    <div><div class="eyebrow">03 · Roleplay</div><h2>Mehr als nur Streife.</h2></div>
+    <p class="lead">Konkrete Ansätze für mehr Präsenz, Qualität und abwechslungsreiches RP.</p>
+  </div>
+  <div class="grid">
+    <div class="card"><div class="number">01</div><h3>Großlagen</h3><p>Koordinierte Einsätze und bessere Zusammenarbeit mit anderen State-Organisationen.</p></div>
+    <div class="card"><div class="number">02</div><h3>Highway-Präsenz</h3><p>Mehr Patrouillen, Verkehrs-RP und feste Präsenz auf Route 68 und den Highways.</p></div>
+    <div class="card"><div class="number">03</div><h3>Kreatives Einsatz-RP</h3><p>Abwechslungsreiche Situationen jenseits der normalen Standard-Verhaftung.</p></div>
+    <div class="card"><div class="number">04</div><h3>Aufnahme</h3><p>Aktivität, Reife, Regelkenntnis und RP-Qualität werden konsequent geprüft.</p></div>
+    <div class="card"><div class="number">05</div><h3>Trainings & Events</h3><p>Verfolgungsjagd-Übungen, interne Trainings und gemeinsame Events.</p></div>
+    <div class="card"><div class="number">06</div><h3>Klare Hierarchie</h3><p>Jeder Beamte kennt seine Zuständigkeiten und Ansprechpartner.</p></div>
+  </div>
+</div>
+</section>
+
+<section id="konzept">
+<div class="container">
+  <div class="section-head">
+    <div><div class="eyebrow">04 · Führung</div><h2>Mein Konzept.</h2></div>
+    <p class="lead">Klare Standards, faire Entwicklung und eine Struktur, die im Alltag funktioniert.</p>
+  </div>
+  <div class="grid">
+    <div class="card"><div class="icon">01</div><h3>Führung</h3><p>Klare Standards, nachvollziehbare Entscheidungen und erreichbare Ansprechpartner.</p></div>
+    <div class="card"><div class="icon">02</div><h3>Ausbildung</h3><p>Einheitliche Prüfungen, praktische Einarbeitung und regelmäßige Weiterbildung.</p></div>
+    <div class="card"><div class="icon">03</div><h3>Kontrolle</h3><p>Internal Affairs arbeitet unabhängig und konsequent gegen Fehlverhalten.</p></div>
+    <div class="card wide"><div class="icon">04</div><h3>Funk- & Einsatzdisziplin</h3><p>Klare Kommunikation und eindeutige Einsatzleitungen verhindern Chaos.</p></div>
+    <div class="card wide"><div class="icon">05</div><h3>Aktivität & Anerkennung</h3><p>Engagierte Beamte erhalten Verantwortung und Entwicklungsmöglichkeiten.</p></div>
+  </div>
+  <div class="quote">Ein starkes SAHP entsteht nicht durch einzelne High Ranks, sondern durch eine Struktur, in der jeder Beamte weiß, was von ihm erwartet wird.</div>
+</div>
+</section>
+
+<section id="ränge">
+<div class="container">
+  <div class="section-head">
+    <div><div class="eyebrow">05 · Struktur</div><h2>Rangkonzept.</h2></div>
+    <p class="lead">Ein transparentes Rangsystem mit klaren Verantwortungsbereichen.</p>
+  </div>
+  <div class="card full">
+    <div class="group-title">Leaderschaft</div>
+    <div class="ranks">
+      <div class="rank"><b>30</b><span>Sheriff of SAHP</span></div><div class="rank"><b>29</b><span>Deputy Sheriff of SAHP</span></div><div class="rank"><b>28</b><span>Assistant Sheriff of SAHP</span></div>
+    </div>
+    <div class="group-title">High Command</div>
+    <div class="ranks">
+      <div class="rank"><b>27</b><span>Curator of Division</span></div><div class="rank"><b>26</b><span>Commissioner</span></div><div class="rank"><b>25</b><span>Division Chief</span></div><div class="rank"><b>24</b><span>Assistant Division Chief</span></div><div class="rank"><b>23</b><span>Captain</span></div><div class="rank"><b>22</b><span>Second Personalmanager</span></div><div class="rank"><b>21</b><span>First Personalmanager</span></div>
+    </div>
+    <div class="group-title">Command</div>
+    <div class="ranks">
+      <div class="rank"><b>20</b><span>Master Sergeant</span></div><div class="rank"><b>19</b><span>First Sergeant</span></div><div class="rank"><b>18</b><span>Sergeant</span></div><div class="rank"><b>17</b><span>Senior Corporal</span></div><div class="rank"><b>16</b><span>Corporal</span></div><div class="rank"><b>15</b><span>State Prison Sergeant</span></div><div class="rank"><b>14</b><span>TOW Sergeant</span></div>
+    </div>
+    <div class="group-title">Officer</div>
+    <div class="ranks">
+      <div class="rank"><b>13</b><span>Master Officer</span></div><div class="rank"><b>12</b><span>Senior Officer</span></div><div class="rank"><b>11</b><span>Officer</span></div><div class="rank"><b>10</b><span>State Prison Officer</span></div><div class="rank"><b>09</b><span>TOW Officer</span></div><div class="rank"><b>08</b><span>Junior Officer</span></div><div class="rank"><b>07</b><span>State Prison Junior Officer</span></div><div class="rank"><b>06</b><span>TOW Junior Officer</span></div><div class="rank"><b>05</b><span>Trainee</span></div><div class="rank"><b>04</b><span>State Prison Trainee</span></div><div class="rank"><b>03</b><span>TOW Trainee</span></div>
+    </div>
+    <div class="group-title">Visitor</div>
+    <div class="ranks">
+      <div class="rank"><b>02</b><span>Suspendiert</span></div><div class="rank"><b>01</b><span>Besucher</span></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="abteilungen">
+<div class="container">
+  <div class="section-head">
+    <div><div class="eyebrow">06 · Departments</div><h2>Abteilungen.</h2></div>
+    <p class="lead">Spezialisierung schafft Verantwortung und bessere Arbeitsteilung.</p>
+  </div>
+  <div class="grid">
+    <div class="card"><div class="eyebrow">DESU</div><h3>Desert Eagle Special Unit</h3><p>Taktische Einsätze und Hochrisikosituationen.</p></div>
+    <div class="card"><div class="eyebrow">HR</div><h3>Human Resources</h3><p>Aufnahmen, Beförderungen und Personalverwaltung.</p></div>
+    <div class="card"><div class="eyebrow">IA</div><h3>Internal Affairs</h3><p>Interne Kontrolle, Beschwerden und Disziplinarverfahren.</p></div>
+    <div class="card"><div class="eyebrow">PA</div><h3>Police Academy</h3><p>Einheitliche Ausbildung und Prüfung neuer Trainees.</p></div>
+    <div class="card"><div class="eyebrow">SP</div><h3>State Prison</h3><p>Verwaltung und Sicherung des Staatsgefängnisses.</p></div>
+    <div class="card"><div class="eyebrow">TOW</div><h3>Traffic / Abschleppdienst</h3><p>Fahrzeugbergung, Straßensicherung und Unterstützung im Verkehr.</p></div>
+    <div class="card"><div class="eyebrow">PR</div><h3>Public Relations</h3><p>Community-Kontakt, Events und Außenwirkung des SAHP.</p></div>
+    <div class="card"><div class="eyebrow">CTF</div><h3>Civil Task Force</h3><p>Zivile Operationen und besondere Aufgaben.</p></div>
+  </div>
+</div>
+</section>
+
+<section id="verfahren">
+<div class="container">
+  <div class="section-head">
+    <div><div class="eyebrow">07 · Recruitment</div><h2>Bewerbungsverfahren.</h2></div>
+    <p class="lead">Ein einheitlicher Ablauf für neue Mitglieder.</p>
+  </div>
+  <div class="grid">
+    <div class="card"><div class="number">01</div><h3>Voraussetzungen prüfen</h3><p>Visum, Aktivität und grundlegende Eignung kontrollieren.</p></div>
+    <div class="card"><div class="number">02</div><h3>Regelwerk-Test</h3><p>Fragen zu Greenzones, New-Life-Regel, Funk und Einsatzverhalten.</p></div>
+    <div class="card"><div class="number">03</div><h3>Gespräch & Entscheidung</h3><p>Mindestens 80 Prozent sowie ein positives persönliches Gespräch.</p></div>
+  </div>
+</div>
+</section>
+
+<section id="ziel">
+<div class="container">
+  <div class="section-head">
+    <div><div class="eyebrow">08 · Vision</div><h2>Mein Ziel für das SAHP.</h2></div>
+  </div>
+  <div class="card full">
+    <div class="quote">
+      Ich will ein SAHP aufbauen, in dem jeder Beamte geschätzt wird,
+      klare Regeln zuverlässig funktionieren und gutes Rollenspiel täglich sichtbar ist.
+    </div>
+    <p>
+      Das SAHP soll mehr sein als eine weitere State-Fraktion. Es soll eine
+      verlässliche Institution werden, die auf den Highways und im Norden des Staates
+      dauerhaft präsent ist.
+    </p>
+    <p>
+      Nach innen stehen Zusammenhalt, faire Entwicklungsmöglichkeiten und klare
+      Strukturen im Mittelpunkt. Nach außen soll das SAHP professionell,
+      respektvoll und kooperationsfähig auftreten.
+    </p>
+    <div class="badges">
+      <span class="badge">Zusammenhalt</span><span class="badge">Wachstum</span>
+      <span class="badge">Highway-Präsenz</span><span class="badge">Führung</span><span class="badge">Respekt</span>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="schlusswort">
+<div class="container">
+  <div class="section-head">
+    <div><div class="eyebrow">09 · Abschluss</div><h2>Schlusswort.</h2></div>
+  </div>
+  <div class="card full">
+    <p>
+      Mir ist bewusst, dass die Position des Leaders große Verantwortung mit sich bringt.
+      Es geht nicht nur darum, Entscheidungen zu treffen, sondern eine gesamte
+      Organisation dauerhaft zu motivieren, zu strukturieren und nach außen zu vertreten.
+    </p>
+    <p>
+      Meine Erfahrungen aus Crime und State haben mir gezeigt, welche Eigenschaften
+      eine funktionierende Führung braucht: Ruhe, Konsequenz, Fairness, Aktivität und
+      die Bereitschaft, eigene Fehler zu erkennen.
+    </p>
+    <div class="quote"><strong>Vielen Dank für das Lesen meiner Bewerbung.</strong><br><br>Mit freundlichen Grüßen<br><strong>Marc / Michael Benko</strong><br>ID #243336 · Discord 0xmarkxx0</div>
+  </div>
+</div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="container footer-inner">
+    <div><strong>SAN ANDREAS HIGHWAY PATROL</strong><div class="mini">Leader-Bewerbung · Michael Benko</div></div>
+    <div class="mini">ID #243336 · Discord 0xmarkxx0</div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  const blockedKeys = new Set([
+    'c','x','u','s','a','p','i','j','k'
+  ]);
+
+  function stop(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    return false;
+  }
+
+  document.addEventListener('contextmenu', stop, true);
+  document.addEventListener('selectstart', stop, true);
+  document.addEventListener('dragstart', stop, true);
+  document.addEventListener('copy', stop, true);
+  document.addEventListener('cut', stop, true);
+
+  document.addEventListener('keydown', function (e) {
+    const key = String(e.key || '').toLowerCase();
+
+    if (e.key === 'F12') return stop(e);
+
+    if (e.ctrlKey && blockedKeys.has(key)) return stop(e);
+    if (e.ctrlKey && e.shiftKey && ['i','j','c','k'].includes(key)) return stop(e);
+    if (e.metaKey && blockedKeys.has(key)) return stop(e);
+  }, true);
+
+  // Prevent copying through the Selection API as well.
+  document.addEventListener('selectionchange', function () {
+    const sel = window.getSelection();
+    if (sel && !sel.isCollapsed) {
+      try { sel.removeAllRanges(); } catch (_) {}
+    }
+  }, true);
+})();
+</script>
+
+</body>
+</html>
